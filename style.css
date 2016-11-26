@@ -1177,6 +1177,12 @@ input[type=text]:focus {
 	}
 }
 
+.page-title{
+	text-align: center;
+	font-style: italic;
+	font-size: 1.4em;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -1800,14 +1806,16 @@ img.alignleft {
 	margin-bottom: 1.5em;
 }
 
-.centered-image {
+.centered-image,
+.featured-image {
 	max-width: calc(100% + 2.8em);
 	margin: 1.5em -1.4em;
 }
 
 @media screen and (min-width: 30em) {
 	
-	.centered-image {
+	.centered-image,
+	.featured-image {
 		max-width: calc(100% + 3.6em);
 		margin: 1.5em -1.8em;
 	}
@@ -1843,6 +1851,29 @@ img.alignleft {
 		margin-left: -3em;
 	}
 }
+
+.featured-image {
+	margin-top: -1.4em;
+	margin-bottom: -1.2em;
+}
+
+@media screen and (min-width: 30em) {
+	.featured-image {
+		margin-top: -1.8em;
+	}
+}
+
+@media screen and (min-width: 50em ) {
+	.featured-image {
+		margin-top: 3em;
+	}
+}
+
+.featured-image img {
+	display: block;
+	margin: 0 auto;
+}
+
 
 /*--------------------------------------------------------------
 ## Galleries
