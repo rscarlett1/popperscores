@@ -25,7 +25,7 @@ function popperscores_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'popperscores' ),
+		esc_html_x( 'Published %s', 'post date', 'popperscores' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -34,7 +34,17 @@ function popperscores_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
+	//Display the author avator
+	$author_id = get_the_author_meta( 'ID');
+	echo '<div class="author-avatar">' . get_avatar ( $author_id ) . '<div>';
+
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+
+	if ( ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		echo '<span class="comments-link">';
+		comments_popup_link( esc_html__( 'Leave a comment', 'popperscores' ), esc_html__( '1 Comment', 'popperscores' ), esc_html__( '% Comments', 'popperscores' ) );
+		echo '</span>';
+	}
 
 }
 endif;
