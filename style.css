@@ -869,6 +869,7 @@ a:active {
 ## Other Navigation
 --------------------------------------------------------------*/
 
+.comment-navigation,
 .post-navigation {
 	padding: 2em 0;
 	font-family: "Fira Sans", sans-serif;
@@ -877,6 +878,7 @@ a:active {
 }
 
 @media screen and (min-width: 50em) {
+	.comment-navigation,
 	.post-navigation {
 		padding: 2em 3em;
 	}
@@ -888,6 +890,7 @@ a:active {
 	padding: 0 .4em;
 }
 
+.comment-navigation a,
 .post-navigation a {
 	display: block;
 	width: 100%;
@@ -896,6 +899,8 @@ a:active {
 	border: 1px solid #c3c3c3;
 }
 
+.comment-navigation a:hover,
+.comment-navigation a:focus,
 .post-navigation a:hover,
 .post-navigation a:focus {
 	border-color: #000;
@@ -924,6 +929,7 @@ a:active {
 		padding: 0;
 	}
 
+	.comment-navigation .nav-previous,
 	.post-navigation .nav-previous {
 		display: flex;
 		align-items: stretch;
@@ -935,6 +941,7 @@ a:active {
 		padding-bottom: 0;
 	}
 
+	.comment-navigation .nav-next,
 	.post-navigation .nav-next {
 		display: flex;
 		align-items: stretch;
@@ -1600,9 +1607,70 @@ input[type=text]:focus {
 
 .bypostauthor .avatar {
 	box-sizing: content-box;
-	border: 5px: solid #c3c3c3;
+	border: 5px solid #c3c3c3;
 	margin-top: -5px;
 	margin-left: -5px;
+}
+
+/* Comment Form */
+
+.comment-respond::after {
+	display: block;
+	margin: 2em auto 4em;
+	content: "";
+	width: 5em;
+	border-bottom: 1px solid #c3c3c3;
+}
+
+.comment-reply-title {
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.comment-list .comment-reply-title {
+	text-align: left;
+}
+
+.comment-form {
+	font-family: "Fira Sans", sans-serif;
+	line-height: 1.3em;
+}
+
+.comment-form a {
+	font-weight: 500;
+}
+
+.comment-form .form-submit {
+	margin-top: 3em;
+}
+
+.comment-form .form-submit input {
+	padding: .5em 1.4em;
+	font-size: 85%;
+    color: #333;
+    line-height: 1.3em;
+    text-decoration: none;
+    border: 1px solid #c3c3c3;
+}
+
+.comment-form .form-submit input:hover,
+.comment-form .form-submit input:focus {
+	border-color: #000;
+	color: #fff;
+	background-color: #000;
+}
+
+.comment-form label {
+	width: 33%;
+}
+.comment-form .required {
+	color: #D54E21;
+}
+
+.comment-form label {
+	display: block;
+	font-style: italic;
+	padding-bottom: .4em;
 }
 
 /*--------------------------------------------------------------
