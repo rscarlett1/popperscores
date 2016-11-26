@@ -1,10 +1,27 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @rscarlett1
+ Watch 29
+  Star 82
+  Fork 76 mor10/popperscores
+ Code  Issues 5  Pull requests 4  Projects 0  Wiki  Pulse  Graphs
+Branch: 06_13 Find file Copy pathpopperscores/style.css
+4aefbc5  on Nov 21, 2015
+@mor10 mor10 Make order more logical
+1 contributor
+RawBlameHistory     
+1682 lines (1409 sloc)  26.8 KB
 /*
 Theme Name: Popperscores
-Theme URI: http://underscores.me/
-Author: Raewynne Scarlett
+Theme URI: http://lynda.com/
+Author: Morten Rand-Hendriksen
 Author URI: http://lynda.com/mor10
 Description: A new awesome theme to showcase awesome content.
-Version: 1.0.0
+Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: popperscores
@@ -31,16 +48,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
+# Header
 # Widgets
-# Headerw
 # Content
+	## Global
     ## Posts and pages
 	## Asides
 	## Comments
 # Infinite scroll
 # Media
-	## Images
 	## Captions
+	## Images
 	## Galleries
 --------------------------------------------------------------*/
 
@@ -258,9 +276,10 @@ table {
 	border-spacing: 0;
 }
 
-td,
+td, 
 th {
-	padding: 0;
+	border: 1px solid #999;
+	padding: 0.5em;
 }
 
 /*--------------------------------------------------------------
@@ -272,13 +291,13 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: 'Open Sans' serif;
+	font-family: 'Merriweather', serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
 }
 
-.site-content{
+.site-content {
 	font-size: 1.125em;
 	line-height: 1.6em;
 }
@@ -289,7 +308,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Open Sans' serif;
+	font-family: 'Fira Sans', sans-serif;
 	clear: both;
 	line-height: 1.3em;
 	margin-top: 2.5rem;
@@ -303,9 +322,9 @@ h4 { font-size: 1.8em; }
 h5 { font-size: 1.6em; }
 h6 { font-size: 1.4em; }
 
+
 p {
 	margin-bottom: 1.5em;
-	font-family: 'Open Sans' serif;
 }
 
 dfn,
@@ -400,7 +419,7 @@ blockquote::before {
     font-family: 'FontAwesome';
     content: "\f10d";
     position: absolute;
-    left: -1.3em;
+    left: -2em;
     color: #ededed;
 }
 
@@ -455,25 +474,24 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-	color: rgba(0, 0, 0, .8);
+	border: 3px solid;
+	border-color: #000;
+	border-radius: 0;
+	background: #fff;
+	color: #000;
+	font-family: 'Fira Sans', sans-serif;
 	font-size: 12px;
 	font-size: 0.75rem;
 	line-height: 1;
 	padding: .6em 1em .4em;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+	border-color: #000;
+	color: #fff;
 }
 
 button:focus,
@@ -484,8 +502,8 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-	border-color: #aaa #bbb #bbb;
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	border-color: #000;
+	color: #fff;
 }
 
 input[type="text"],
@@ -557,7 +575,7 @@ a:active {
 	clear: both;
 	display: block;
 	width: 100%;
-	font-family: 'Open Sans' serif;
+	font-family: 'Fira Sans', sans-serif;
 	font-weight: 300;
 	font-size: 1em;
 }
@@ -752,6 +770,7 @@ a:active {
 	.main-navigation.toggled {
 		position: relative;
 		min-height: 3.5em;
+		/*max-width: 58em;*/
 		margin: 0 auto;
 		padding: 0 3.5em;
 		background-color: #000;
@@ -846,36 +865,13 @@ a:active {
 	
 }
 
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
-
 /*--------------------------------------------------------------
 ## Other Navigation
 --------------------------------------------------------------*/
 
-
 .post-navigation {
 	padding: 2em 0;
-	font-family: "Open Sans", sans-serif;
+	font-family: "Fira Sans", sans-serif;
 	text-align: left;
 	overflow: hidden;
 }
@@ -956,6 +952,7 @@ a:active {
 	.post-navigation .meta-nav {
 		padding-bottom: 1em;
 	}
+}
 
 
 /*--------------------------------------------------------------
@@ -1047,18 +1044,6 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-}
-
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
-}
-
-/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 .site-branding{
@@ -1136,6 +1121,17 @@ input[type=text]:focus {
     }
     
 }
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
 
 /*--------------------------------------------------------------
 # Content
@@ -1143,28 +1139,35 @@ input[type=text]:focus {
 /*--------------------------------------------------------------
 ## Global
 --------------------------------------------------------------*/
-.site-main{
+
+.content-area {
+	overflow-x: hidden;
+}
+
+
+.site-main {
 	margin: 1.4em;
 	font-size: .8em;
 	line-height: 1.6em;
 }
 
-/*@media screen and (min-width: 30em){
-	.site-main{
+@media screen and (min-width: 30em) {
+	.site-main {
 		margin: 1.8em;
-	}*/
+	}
 }
-@media screen and (min-width: 40em){
-	.site-main{
+
+@media screen and (min-width: 40em) {
+	.site-main {
 		font-size: 1em;
 	}
 }
 
-/*@media screen and (min-width: 57em){
-	.site-main{
+@media screen and (min-width: 57em) {
+	.site-main {
 		max-width: 45em;
-		margin: 1.8em, auto;
-	}*/
+		margin: 1.8em auto;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1272,7 +1275,7 @@ input[type=text]:focus {
 
 @media screen and (min-width: 57em) {
 	.entry-meta {
-		/*position: relative;*/
+		position: relative;
 		width: 100%;
 		width: 100vw;
 		left: 0;
@@ -1413,7 +1416,6 @@ input[type=text]:focus {
 	color: #000;
 }
 
-
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
@@ -1425,13 +1427,198 @@ input[type=text]:focus {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-area {
+	margin: 4em 0;
+}
+
+@media screen and (min-width: 40em) {
+	.comments-area {
+		margin: 4em 1em;
+	}
+}
+
+.comments-title {
+	margin-bottom: 2em;
+	font-size: 2em;
+	text-align: center;
+}
+
+.comment-list {
+	padding: 0;
+	margin: 0;
+}
+
+.comment-list,
+.comment-list ol {
+	list-style-type: none;
+}
+
+.comment-body {
+	border-bottom: 1px solid #c3c3c3;
+	margin-bottom: 3em;
+}
+
+.comment-meta {
+	position: relative;
+	margin-left: 70px;
+	font-family: "Fira Sans", sans-serif;
+	font-style: italic;
+	font-size: 80%;
+}
+
+.comment .avatar {
+	position: absolute;
+	left: -70px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+}
+
+.children {
+	margin-left: 1em;
+	padding-left: 0;
+}
+
+.comment .avatar {
+	top: -5px;
+}
+
+@media screen and (min-width: 30em) {
+
+	.children {
+		margin-left: 2em;
+	}
+
+	.comment-meta {
+		margin-left: 80px;
+		font-size: 90%;
+	}
+
+	.comment .avatar {
+		top: -7px;
+		left: -80px;
+		width: 60px;
+		height: 60px;
+	}
+
+	.comment-content {
+		margin-left: 80px;
+	}
+
+}
+@media screen and (min-width: 50em) {
+
+	.children {
+		margin-left: 3em;
+	}
+
+	.comments-area {
+		margin: 4em 3em;
+		font-size: 1.1em;
+	}
+
+	.comment-meta {
+		margin-left: 90px;
+	}
+
+	.comment .avatar {
+		top: -8px;
+		left: -90px;
+		width: 70px;
+		height: 70px;
+	}
+
+	.comment-content {
+		margin-left: 90px;
+	}
+}
+
+.comment-meta a {
+	text-decoration: none;
+}
+
+.comment-meta a:hover,
+.comment-meta a:focus {
+	border-bottom: 2px solid #000;
+}
+
+.comment-metadata a:hover,
+.comment-metadata a:focus {
+	border-color: #c3c3c3;
+}
+
+.comment-author {
+	font-size: 1.4em;
+	line-height: 1.3em;
+}
+
+.says {
+	font-size: 80%;
+}
+
+.comment-metadata {
+    margin-top: .2em;
+	padding-bottom: .5em;
+	font-size: .8em;
+	line-height: 1em;
+}
+
+.comment-metadata a {
+	color: #808080;
+}
+
+.reply {
+	margin-bottom: 1.5em;
+	text-align: right;
+}
+
+.reply a {
+	display: inline-block;
+	padding: .5em 1.4em;
+	font-family: "Fira Sans", sans-serif;
+	font-size: 85%;
+	color: #333;
+	line-height: 1.3em;
+	text-decoration: none;
+	border: 1px solid #c3c3c3;
+}
+
+.reply a:hover,
+.reply a:focus {
+	background: #000;
+	color: #fff;
+	border-color: #000;
+}
+
+.comment-content ol {
+	list-style-type: decimal;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
 
-.bypostauthor {
+.bypostauthor .avatar {
+	box-sizing: content-box;
+	border: 5px: solid #c3c3c3;
+	margin-top: -5px;
+	margin-left: -5px;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
 	display: block;
 }
+
 
 /*--------------------------------------------------------------
 # Infinite scroll
@@ -1465,66 +1652,6 @@ iframe,
 object {
 	max-width: 100%;
 }
-
-/*--------------------------------------------------------------
-# Images
---------------------------------------------------------------*/
-
-
-
-img.aligncenter {
-	margin-top: 2em;
-	margin-bottom: 2em;
-}
-
-img.alignright,
-img.alignleft {
-	margin-bottom: 1.5em;
-}
-
-.centered-image {
-	max-width: calc(100% + 2.8em);
-	margin: 1.5em -1.4em;
-}
-
-@media screen and (min-width: 30em) {
-	
-	.centered-image {
-		max-width: calc(100% + 3.6em);
-		margin: 1.5em -1.8em;
-	}
-
-}
-@media screen and (min-width: 50em) {
-	
-	img.alignright,
-	.wp-caption.alignright {
-		margin-right: -1.5em;
-	}
-	
-	img.alignleft,
-	.wp-caption.alignleft {
-		margin-left: -1.5em;
-	}
-	
-	.centered-image {
-		max-width: calc(100% + 6em);
-		margin-right: -3em;
-		margin-left: -3em;
-	}
-	
-}
-
-@media screen and (min-width: 74em) {
-	img.alignright,
-	.wp-caption.alignright {
-		margin-right: -3em;
-	}
-	img.alignleft,
-	.wp-caption.alignleft {
-		margin-left: -3em;
-	}
-
 
 /*--------------------------------------------------------------
 ## Captions
@@ -1589,6 +1716,64 @@ img.alignleft {
 .alignleft .wp-caption-text {
 	margin-top: 1em;
 	margin-bottom: 1em;
+}
+
+/*--------------------------------------------------------------
+## Images
+--------------------------------------------------------------*/
+
+img.aligncenter {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+img.alignright,
+img.alignleft {
+	margin-bottom: 1.5em;
+}
+
+.centered-image {
+	max-width: calc(100% + 2.8em);
+	margin: 1.5em -1.4em;
+}
+
+@media screen and (min-width: 30em) {
+	
+	.centered-image {
+		max-width: calc(100% + 3.6em);
+		margin: 1.5em -1.8em;
+	}
+
+}
+@media screen and (min-width: 50em) {
+	
+	img.alignright,
+	.wp-caption.alignright {
+		margin-right: -1.5em;
+	}
+	
+	img.alignleft,
+	.wp-caption.alignleft {
+		margin-left: -1.5em;
+	}
+	
+	.centered-image {
+		max-width: calc(100% + 6em);
+		margin-right: -3em;
+		margin-left: -3em;
+	}
+	
+}
+
+@media screen and (min-width: 74em) {
+	img.alignright,
+	.wp-caption.alignright {
+		margin-right: -3em;
+	}
+	img.alignleft,
+	.wp-caption.alignleft {
+		margin-left: -3em;
+	}
 }
 
 /*--------------------------------------------------------------
@@ -1675,3 +1860,5 @@ img.alignleft {
 .gallery-caption::before {
 	content: "";
 }
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
