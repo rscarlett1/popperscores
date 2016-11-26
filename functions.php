@@ -109,7 +109,8 @@ function popperscores_scripts() {
 
 	wp_enqueue_script('horse-website-font-awesome', 'https://use.fontawesome.com/9716eb12cb.js' ,[], '4.0.7', true );
 		
-	wp_enqueue_script( 'popperscores-navigation', get_template_directory_uri() . '/js/function.js', array( 'jquery' ), '20120206', true );
+	wp_enqueue_script( 'popperscores-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20120206', true );
+
 	wp_localize_script( 'popperscores-navigation', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'Popperscores' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'Popperscores' ) . '</span>',
