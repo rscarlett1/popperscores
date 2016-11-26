@@ -1192,6 +1192,14 @@ input[type=text]:focus {
 	margin: 2em auto;
 }
 
+.taxonomy-description{
+	margin-top: 1.5em;
+	border: 1px solid #c3c3c3;
+	padding: .5em 1 1.8em 0;
+	text-align: center;
+	font-style: italic;
+}
+
 .entry-title.index-excerpt {
 	margin-top: 2em;
 	margin-bottom: .5em;
@@ -1347,7 +1355,17 @@ input[type=text]:focus {
 }
 
 .sticky {
+	position: relative;
 	display: block;
+}
+
+.sticky::before {
+	position: absolute;
+	top: -1.5em;
+	right: 0;
+	display: block;
+	font-family: "FontAwesome";
+	content: "\f08d";
 }
 
 .hentry {
