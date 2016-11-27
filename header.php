@@ -20,7 +20,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site sidebar-right <?php echo get_theme_mod( 'layout_setting', 'no-sidebar' ); ?>">
+<div id="page" class="site <?php echo get_theme_mod( 'layout_setting', 'no-sidebar' ); ?>">
+
+    
 
     <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'popperscores' ); ?></a>
 
