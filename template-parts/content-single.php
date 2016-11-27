@@ -13,13 +13,20 @@
 	<header class="entry-header">
 		
 		<?php 
- 		if ( has_post_thumbnail() ) { ?>
- 			<figure class="featured-image">
- 				<?php the_post_thumbnail(); ?>
- 			</figure>
- 		<?php }
- 		?>
-
+		if ( has_post_thumbnail() ) { ?>
+			<figure class="featured-image">
+				<?php if ( $first_post == true ) { ?>
+					<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+						<?php the_post_thumbnail(); ?>
+					</a>
+				<?php } else { 
+					the_post_thumbnail(); 
+				}
+				?>
+			</figure>
+		<?php }
+		?>
+		
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
