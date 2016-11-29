@@ -563,6 +563,7 @@ a:active {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-size: 1em;
+	background-color: #444954;
 }
 
 .main-navigation ul {
@@ -1083,10 +1084,26 @@ a:active {
     width: 100%;
 }
 
+@media all and (min-width: 600px) {
+    #top-header {
+	font-size: 1.000em;
+    display: flex;
+	justify-content: space-around;
+}
+
+@media all and (min-width: 600px) {
+    #top-header {
+	font-size: 1.000em;
+    display: flex;
+	justify-content: space-around;
+}
+/*end section on top of the header*/
+
+/*middle logo area*/
+
 /*header logo image*/
 #header{
 	background: url(/images/header-image.jpg) no-repeat;
-	background-size: 100%;
 }
 
 /*large background image*/
@@ -1094,12 +1111,16 @@ a:active {
         background: url("http://localhost/wordpress/wp-content/uploads/2016/11/horse-fur-1463818236Jdk.jpg");
         background-repeat: no-repeat;
         background-position: center; 
-        background-size: 100%;
+        
 }
 
+
+ img{
+	padding: 10px;
+}
+
+
 /*search area*/
-
-
 .search-field {
     position:relative;
     height:35px;
@@ -1111,7 +1132,6 @@ form,
 label,
 input.search-field {
     background-color: transparent;
-
 }
 
 
@@ -1119,69 +1139,23 @@ input.search-submit{
 	background-color: transparent;
 }
 
-#logo-area,
-form.search-form {
-    padding: 10px;
-}
-
-@media all and (min-width: 600px) {
-	form.search-form{
-	padding-top: 2.5em;
-	height: 20%;
-	}
-
-}
-
-@media all and (min-width: 750px) {
-	#logo-area {
-    margin-left: 15%;
-    margin-right: 10%;
+.search-form {
+	background-color: yellow;
+    padding: 50px;
 }
 
 
-#background-horse{
-    display: flex;
-    justify-content: center;
-    background-size: cover;
-    
-	}
 
 
 
-#logo-area{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-    }
 
-div#logo-area {
-    width: 90%;
-}
 
-@media all and (min-width: 600px) {
-    #top-header {
-	font-size: 1.000em;
-     display: flex;
-	justify-content: space-around;
-    }
     
-    #logo-area{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 60%;
-    }
+      
+       
     
-    form{
-        padding-top: 45px;
-    }
     
-    input[type=text]{
-        text-align: right;
-    }
-    
-}
+
 
 /*--------------------------------------------------------------
 # Widgets
