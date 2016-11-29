@@ -45,34 +45,32 @@
                 <p><i class="fa fa-phone" aria-hidden="true"></i> &#40;04&#41;123 4567</p>
                 <p>My Bag</p>
             </div>
-
-             <div id="background-horse">
-                        <div id="logo-area">
-                           
-                            <?php if ( get_header_image() ) : ?>
+                <div id="background-horse">
+                    <div id="logo-area">
+                       
+                        <?php if ( get_header_image() ) : ?>
                             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                             <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
                             </a>
-                            <?php endif;?>
-                            <form>
-                            <input type="text" name="search" placeholder="Search"/>
-                            </form>
-                        </div>            
-
-
-
-
-
-        </div><!-- .site-branding -->
-
-
-
-
-
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'popperscores' ); ?></button>
-            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu' ) ); ?>
-        </nav><!-- #site-navigation -->
+                        <?php endif;?>
+                        
+                        
+                        <form role="search" method="get" class="search-form" action="http://localhost/wordpress/">
+                            <label>
+                                <span class="screen-reader-text">Search for:</span>
+                                <input type="search" class="search-field" value="" name="s" />
+                            </label>
+                        <input type="submit" class="search-submit" value="Search" />
+                        <!-- <input type="text" name="search" placeholder="Search"/> -->
+                        </form>
+                    </div><!--  logo area -->
+                </div><!-- background image -->            
+                
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'popperscores' ); ?></button>
+                <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu' ) ); ?>
+            </nav><!-- #site-navigation -->
+        
     </header><!-- #masthead -->
 
-    <div id="content" class="site-content">
+    
