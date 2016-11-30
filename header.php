@@ -41,9 +41,9 @@
             <?php endif; ?>
 
             <div id="top-header">
-                <p>We Deliver Every Weekday</p>
-                <p><i class="fa fa-phone" aria-hidden="true"></i> &#40;04&#41;123 4567</p>
-                <p>My Bag</p>
+                <div>We Deliver Every Weekday</div>
+                <div><i class="fa fa-phone" aria-hidden="true"></i> &#40;04&#41;123 4567</div>
+                <div>My Bag</div>
             </div>
                 <div id="background-horse">
                     <div id="logo-area">

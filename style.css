@@ -1084,19 +1084,32 @@ a:active {
     width: 100%;
 }
 
-@media all and (min-width: 600px) {
-    #top-header {
-	font-size: 1.000em;
-    display: flex;
-	justify-content: space-around;
+/*top header flex properties*/
+#top-header{
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+
+#top-header div{
+	flex: 1 0 100%;
 }
 
 @media all and (min-width: 600px) {
     #top-header {
 	font-size: 1.000em;
-    display: flex;
-	justify-content: space-around;
+	justify-content: center;
 }
+
+@media all and (min-width: 600px) {
+	#top-header div{
+		flex: 1 0 33.3%;
+		align-items: center;
+
+	}
+}
+
+
 /*end section on top of the header*/
 
 /*middle logo area*/
@@ -1114,11 +1127,21 @@ a:active {
         
 }
 
-
- img{
-	padding: 10px;
+#logo-area{
+	background-color: red;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
+
+#logo-area div{
+	flex: 1 0 50%;
+}
+
+
+ 
 
 /*search area*/
 .search-field {
@@ -1140,8 +1163,7 @@ input.search-submit{
 }
 
 .search-form {
-	background-color: yellow;
-    padding: 50px;
+	padding: 50px;
 }
 
 
