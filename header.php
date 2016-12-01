@@ -45,7 +45,7 @@
                 <div><i class="fa fa-phone" aria-hidden="true"></i> &#40;04&#41;123 4567</div>
                 <div>My Bag</div>
             </div>
-                <div id="background-horse">
+                <div id="horse-image">
                     <div id="logo-area">
                        
                         <?php if ( get_header_image() ) : ?>
@@ -68,8 +68,7 @@
                 <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'popperscores' ); ?></button>
                 <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'nav-menu' ) ); ?>
             </nav><!-- #site-navigation -->
-
-                 </div><!-- background image --> 
+        </div><!-- background image --> 
 
                            
                 

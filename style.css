@@ -1072,7 +1072,7 @@ a:active {
 --------------------------------------------------------------*/
 .site-branding{
     text-align: center;
-}
+ }
 
 /*section on top of the header*/
 #top-header{
@@ -1120,28 +1120,22 @@ a:active {
 }
 
 /*large background image*/
-#background-horse{
-        background: url("http://localhost/wordpress/wp-content/uploads/2016/11/horse-fur-1463818236Jdk.jpg");
-        background-repeat: no-repeat;
+#horse-image{
+        background: url("http://localhost/wordpress/wp-content/uploads/2016/11/horse-fur-1463818236Jdk.jpg") !important;
+        background-repeat: no-repeat ;
         background-position: center; 
-        
 }
 
 #logo-area{
-	background-color: red;
 	padding: 20px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-
 #logo-area div{
 	flex: 1 0 50%;
 }
-
-
- 
 
 /*search area*/
 .search-field {
@@ -2434,16 +2428,100 @@ img.alignleft {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
-
-.site-footer{
+/*styling whole footer*/
+.site-info{
 	height:  20%;
-	padding: 6em 1em;
 	font-family: "Open Sans, sans-serif";
 	text-align: center;
 	color: #fff;
 	background-color: #000;
 }
 
-.site-footer a {
+.site-info a {
 	color: #fff;
 }
+
+/*styling shipping block*/
+
+.shipping-info{
+	background-color: #444954;
+	text-align: center;
+	padding: 1px;
+}
+
+.subscription-details p{
+	font-weight: bold;
+	font-size: larger;
+}
+
+#links div{
+	font-size: larger;
+	font-weight: bold;
+}
+
+/*styling site-links*/
+#links a{
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding: 2px;
+}
+
+#email-padding{
+	margin-left: 7%;
+}
+
+#links,
+input[type="text"] {
+    margin-bottom: 10px;
+}
+
+#links,
+input[type="submit"] {
+    margin-top: 10px;
+}
+
+/*styling address detauls*/
+
+#address-details{
+	padding-top: 15px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: larger;
+}
+
+
+
+
+/*flex styling mobile*/
+
+#links{
+	display: flex;
+	flex-direction: column;
+}
+
+.subscription-details{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+
+/*flex styling middle screen*/
+@media screen and (min-width: 50em){
+	.site-links{
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+	.footer-details{
+		flex: 1 0 30%;
+	}
+}
+
+
+
+

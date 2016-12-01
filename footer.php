@@ -8,16 +8,55 @@
  *
  * @package Popperscores
  */
-
 ?>
 
-	</div><!-- #content -->
+</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'popperscores' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'popperscores' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'popperscores' ), 'popperscores', '<a href="http://lynda.com/mor10" rel="designer">Morten Rand-Hendriksen</a>' ); ?>
+		<div class=site-info>		
+			<div class="shipping-info">
+				<p>Free Shipping On Orders Over $100 Within New Zealand</p>
+			</div><!-- .shipping-info -->
+
+			<div class="site-links">
+				<div id="links" class="footer-details">
+					<div>Our Website Links</div>
+					<a href="#">Blog</a>
+					<a href="#">Contact Us</a>
+					<a href="#">FAQs</a>
+					<a href="#">Returns and Shipping</a>
+					<a href="#">Testimonials</a>
+					<a href="#">Customer Support</a>
+				</div>
+
+				<div class="subscription-details" class="footer-details">
+					<div>
+						<p>Become a Love Of Horses Member</p>
+					</div>
+
+					<div>
+						<form>
+							<label>First name: </label>
+							<input type="text" name="fname"><br>
+							<label>Last name:</label>
+							<input type="text" name="lname"><br>
+							<label id="email-padding">E-mail:</label>
+							<input type="email" name="email" autocomplete="off"><br>
+							<input type="submit">
+						</form>
+					</div>
+				</div>
+
+				<div id="address-details" class="footer-details">
+					<address>
+	 					<div>Visit us at:</div>
+						<div>35 California Drive</div>
+						<div>Totara Park</div>
+						<div>Upper Hutt</div>
+					</address>
+				</div><!-- .footer-details-->
+
+			</div><!-- .site-links -->
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
@@ -26,3 +65,9 @@
 
 </body>
 </html>
+
+
+
+
+
+			
