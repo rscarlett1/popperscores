@@ -20,7 +20,7 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content-templates/content', 'contact' ); ?>
-
+			<h1>this is the ccontent page</h1>
 				
 			<?php endwhile; // End of the loop. ?>
 
